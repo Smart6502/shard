@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+[ -f .shard.log ] && rm .shard.log; I="$1"
+[ -z $I ] && I=1980x1080
+DISPLAY=:0
+XPATH=$(whereis -b Xephyr | cut -f2 -d' ')
+startx ../.xinitrc -- \
+		"$XPATH" \
+		:50 \
+		-ac \
+		-screen $I
+DISPLAY=:50 termite &
+cat .shard.log
+
