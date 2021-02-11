@@ -3,11 +3,10 @@
 [ -z $I ] && I=1980x1080
 DISPLAY=:0
 XPATH=$(whereis -b Xephyr | cut -f2 -d' ')
-startx ../.xinitrc -- \
+startx ./.xinitrc -- \
 		"$XPATH" \
 		:50 \
 		-ac \
 		-screen $I
 DISPLAY=:50 termite &
 cat .shard.log
-

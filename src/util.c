@@ -44,7 +44,7 @@ void log_print(char* filename, int line, char *fmt, ...)
     else
       fp = fopen (".shard.log","w");
     
-    fprintf(fp,"\033[1;32m[ Shard ] ");
+    fprintf(fp,"\033[1;32m%d [ Shard ] ", SESSION_TRACKER + 1);
     fprintf(fp,"[%s -> %d] \033[0m",filename,line);
     va_start( list, fmt );
 

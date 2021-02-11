@@ -1,0 +1,12 @@
+[1;32m1 [ Shard ] [src/shard.c -> 221] [0mInitializing shardWM on display :50
+[1;32m2 [ Shard ] [src/shard.c -> 231] [0mCreated cursor!
+[1;32m3 [ Shard ] [src/shard.c -> 232] [0mGrabbed input!
+[1;32m4 [ Shard ] [src/shard.c -> 233] [0mInitialized shardWM
+[1;32m5 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
+[1;32m6 [ Shard ] [src/shard.c -> 84] [0mAdded window 6291459
+[1;32m7 [ Shard ] [src/shard.c -> 112] [0mCentered window 6291459
+[1;32m8 [ Shard ] [src/events.c -> 65] [0mEvent: MapRequest
+[1;32m9 [ Shard ] [src/events.c -> 80] [0mEvent: EnterNotify
+[1;32m10 [ Shard ] [src/shard.c -> 186] [0mExiting...
+[1;32m11 [ Shard ] [src/events.c -> 74] [0mEvent: KeyPress
+[1;32m12 [ Shard ] [src/shard.c -> 237] [0mClosing display -> :50

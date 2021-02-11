@@ -1,4 +1,4 @@
-CFLAGS += -std=c99 -Wall -Wextra -pedantic -Wold-style-declaration
+CFLAGS += -std=c99 -Wall -Wextra -I src/ -pedantic -Wold-style-declaration
 CFLAGS += -Wmissing-prototypes -Wno-unused-parameter
 PREFIX ?= /usr
 BINDIR ?= $(PREFIX)/bin
