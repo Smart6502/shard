@@ -26,7 +26,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 void button_press(XEvent *e) {
-    if (!e->xbutton.subwindow) return;
+    if (!e->xbutton.subwindow || getwnum(cur->w)) return;
 
     sizewin(e->xbutton.subwindow, &wx, &wy, &ww, &wh);
     XRaiseWindow(d, e->xbutton.subwindow);
@@ -34,6 +34,7 @@ void button_press(XEvent *e) {
 }
 
 void button_release(XEvent *e) {
+	if(getwnum(cur->w)) return;
     mouse.subwindow = 0; logger("Event: ButtonRelease");
 }
 
@@ -98,7 +99,7 @@ void notify_mapping(XEvent *e) {
 }
 
 void notify_motion(XEvent *e) {
-    if (!mouse.subwindow || cur->f) return;
+    if (!mouse.subwindow || cur->f || getwnum(cur->w)) return;
 
     while(XCheckTypedEvent(d, MotionNotify, e));
 
