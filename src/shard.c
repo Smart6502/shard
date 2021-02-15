@@ -36,6 +36,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <util.h>
 
 static client       *list = {0}, *ws_list[10] = {0}, *cur;
+static _wsinfo	    info, ws_info[10];
 static int          ws = 1, sw, sh, wx, wy, numlock = 0, restart = 0, running = 1;
 static unsigned int ww, wh;
 
@@ -44,6 +45,7 @@ static XButtonEvent	mouse;
 static Window		root;
 
 #include <config.h>
+#include <tiling.c>
 #include <events.c>
 
 static void (*evhandler[LASTEvent])(XEvent *e) = {
@@ -97,6 +99,7 @@ void delwin(Window w) {
     if (x->prev)      x->prev->next = x->next;
 
     free(x); logger("Deleted window %d", w);
+    deltile(w);
     ws_save(ws);
 }
 

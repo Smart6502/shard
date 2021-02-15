@@ -28,8 +28,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <X11/Xlib.h>
 
 #define win        (client *t=0, *c=list; c && t!=list->prev; t=c, c=c->next)
-#define ws_save(W) ws_list[W] = list
-#define ws_sel(W)  list = ws_list[ws = W]
+#define ws_save(W) {\
+	ws_list[W] = list;\
+	ws_info[W] = info;\
+}
+#define ws_sel(W)  {\
+	list = ws_list[ws = W];\
+	info = ws_info[ws = W];\
+}
 #define MAX(a, b)  ((a) > (b) ? (a) : (b))
 #define sizewin(W, gx, gy, gw, gh) \
     XGetGeometry(d, W, &(Window){0}, gx, gy, gw, gh, \
@@ -56,6 +62,12 @@ typedef struct client {
     unsigned int ww, wh;
     Window w;
 } client;
+
+typedef struct wsinfo {
+	int size;
+	Window wins[15];
+	Window master;
+} _wsinfo;
 
 void focus(client *c);
 void button_press(XEvent *e);

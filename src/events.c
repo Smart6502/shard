@@ -58,10 +58,11 @@ void mapreq(XEvent *e) {
     addwin(w);
     cur = list->prev;
 
-    if (wx + wy == 0) centerwin((Arg){0});
+    if (wx + wy == 0 && info.size == 6) centerwin((Arg){0});
 
     XMapWindow(d, w);
-    focus(list->prev); 
+    focus(list->prev);
+    tile(w);
     logger("Event: MapRequest");
 }
 
