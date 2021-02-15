@@ -1,176 +1,100 @@
-[1;32m1 [ Shard ] [src/shard.c -> 224] [0mInitializing shardWM on display :50
-[1;32m2 [ Shard ] [src/shard.c -> 234] [0mCreated cursor!
-[1;32m3 [ Shard ] [src/shard.c -> 235] [0mGrabbed input!
-[1;32m4 [ Shard ] [src/shard.c -> 236] [0mInitialized shardWM
-[1;32m5 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
+[1;32m1 [ Shard ] [src/shard.c -> 225] [0mInitializing shardWM on display :50
+[1;32m2 [ Shard ] [src/shard.c -> 235] [0mCreated cursor!
+[1;32m3 [ Shard ] [src/shard.c -> 236] [0mGrabbed input!
+[1;32m4 [ Shard ] [src/shard.c -> 237] [0mInitialized shardWM
+[1;32m5 [ Shard ] [src/shard.c -> 182] [0mRunning shard...
 [1;32m6 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
 [1;32m7 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
 [1;32m8 [ Shard ] [src/shard.c -> 86] [0mAdded window 8388611
-[1;32m9 [ Shard ] [src/tiling.c -> 72] [0mSet up master 8388611
-[1;32m10 [ Shard ] [src/tiling.c -> 37] [0mUpdating primary master...
+[1;32m9 [ Shard ] [src/tiling.c -> 68] [0mSet up master 8388611
+[1;32m10 [ Shard ] [src/tiling.c -> 33] [0mUpdating primary master...
 [1;32m11 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
 [1;32m12 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m13 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
+[1;32m13 [ Shard ] [src/shard.c -> 182] [0mRunning shard...
 [1;32m14 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
 [1;32m15 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
 [1;32m16 [ Shard ] [src/shard.c -> 86] [0mAdded window 10485763
-[1;32m17 [ Shard ] [src/tiling.c -> 41] [0mUpdating master...
+[1;32m17 [ Shard ] [src/tiling.c -> 37] [0mUpdating master...
 [1;32m18 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m19 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
+[1;32m19 [ Shard ] [src/shard.c -> 182] [0mRunning shard...
 [1;32m20 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
 [1;32m21 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
 [1;32m22 [ Shard ] [src/shard.c -> 86] [0mAdded window 12582915
-[1;32m23 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m24 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m25 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m26 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
+[1;32m23 [ Shard ] [src/tiling.c -> 44] [0mUpdating stack....
+[1;32m24 [ Shard ] [src/tiling.c -> 46] [0mTiled: 0 -> 8388611
+[1;32m25 [ Shard ] [src/tiling.c -> 46] [0mTiled: 1 -> 10485763
+[1;32m26 [ Shard ] [src/tiling.c -> 46] [0mTiled: 2 -> 12582915
 [1;32m27 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m28 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
+[1;32m28 [ Shard ] [src/shard.c -> 182] [0mRunning shard...
 [1;32m29 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
 [1;32m30 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
 [1;32m31 [ Shard ] [src/shard.c -> 86] [0mAdded window 14680067
-[1;32m32 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m33 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m34 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m35 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m36 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
+[1;32m32 [ Shard ] [src/tiling.c -> 44] [0mUpdating stack....
+[1;32m33 [ Shard ] [src/tiling.c -> 46] [0mTiled: 0 -> 8388611
+[1;32m34 [ Shard ] [src/tiling.c -> 46] [0mTiled: 1 -> 10485763
+[1;32m35 [ Shard ] [src/tiling.c -> 46] [0mTiled: 2 -> 12582915
+[1;32m36 [ Shard ] [src/tiling.c -> 46] [0mTiled: 3 -> 14680067
 [1;32m37 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m38 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
+[1;32m38 [ Shard ] [src/shard.c -> 182] [0mRunning shard...
 [1;32m39 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
 [1;32m40 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
 [1;32m41 [ Shard ] [src/shard.c -> 86] [0mAdded window 16777219
-[1;32m42 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m43 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m44 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m45 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m46 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m47 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
+[1;32m42 [ Shard ] [src/tiling.c -> 44] [0mUpdating stack....
+[1;32m43 [ Shard ] [src/tiling.c -> 46] [0mTiled: 0 -> 8388611
+[1;32m44 [ Shard ] [src/tiling.c -> 46] [0mTiled: 1 -> 10485763
+[1;32m45 [ Shard ] [src/tiling.c -> 46] [0mTiled: 2 -> 12582915
+[1;32m46 [ Shard ] [src/tiling.c -> 46] [0mTiled: 3 -> 14680067
+[1;32m47 [ Shard ] [src/tiling.c -> 46] [0mTiled: 4 -> 16777219
 [1;32m48 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m49 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
+[1;32m49 [ Shard ] [src/shard.c -> 182] [0mRunning shard...
 [1;32m50 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
 [1;32m51 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
 [1;32m52 [ Shard ] [src/shard.c -> 86] [0mAdded window 18874371
-[1;32m53 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m54 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m55 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m56 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m57 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m58 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m59 [ Shard ] [src/tiling.c -> 50] [0mTiled: 5 -> 18874371
+[1;32m53 [ Shard ] [src/tiling.c -> 44] [0mUpdating stack....
+[1;32m54 [ Shard ] [src/tiling.c -> 46] [0mTiled: 0 -> 8388611
+[1;32m55 [ Shard ] [src/tiling.c -> 46] [0mTiled: 1 -> 10485763
+[1;32m56 [ Shard ] [src/tiling.c -> 46] [0mTiled: 2 -> 12582915
+[1;32m57 [ Shard ] [src/tiling.c -> 46] [0mTiled: 3 -> 14680067
+[1;32m58 [ Shard ] [src/tiling.c -> 46] [0mTiled: 4 -> 16777219
+[1;32m59 [ Shard ] [src/tiling.c -> 46] [0mTiled: 5 -> 18874371
 [1;32m60 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m61 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
+[1;32m61 [ Shard ] [src/shard.c -> 108] [0mKilled client 18874371
 [1;32m62 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m63 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
-[1;32m64 [ Shard ] [src/shard.c -> 86] [0mAdded window 20971523
-[1;32m65 [ Shard ] [src/shard.c -> 115] [0mCentered window 20971523
-[1;32m66 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m67 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m68 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m69 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m70 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m71 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m72 [ Shard ] [src/tiling.c -> 50] [0mTiled: 5 -> 18874371
-[1;32m73 [ Shard ] [src/tiling.c -> 50] [0mTiled: 6 -> 20971523
-[1;32m74 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m75 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m76 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m77 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
-[1;32m78 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m79 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
-[1;32m80 [ Shard ] [src/shard.c -> 86] [0mAdded window 23068675
-[1;32m81 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m82 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m83 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m84 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m85 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m86 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m87 [ Shard ] [src/tiling.c -> 50] [0mTiled: 5 -> 18874371
-[1;32m88 [ Shard ] [src/tiling.c -> 50] [0mTiled: 6 -> 20971523
-[1;32m89 [ Shard ] [src/tiling.c -> 50] [0mTiled: 7 -> 23068675
-[1;32m90 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m91 [ Shard ] [src/shard.c -> 181] [0mRunning shard...
-[1;32m92 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m93 [ Shard ] [src/events.c -> 50] [0mEvent: ConfigureRequest
-[1;32m94 [ Shard ] [src/shard.c -> 86] [0mAdded window 25165827
-[1;32m95 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m96 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m97 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m98 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m99 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m100 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m101 [ Shard ] [src/tiling.c -> 50] [0mTiled: 5 -> 18874371
-[1;32m102 [ Shard ] [src/tiling.c -> 50] [0mTiled: 6 -> 20971523
-[1;32m103 [ Shard ] [src/tiling.c -> 50] [0mTiled: 7 -> 23068675
-[1;32m104 [ Shard ] [src/tiling.c -> 50] [0mTiled: 8 -> 25165827
-[1;32m105 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m106 [ Shard ] [src/shard.c -> 108] [0mKilled client 25165827
-[1;32m107 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m108 [ Shard ] [src/shard.c -> 101] [0mDeleted window 25165827
-[1;32m109 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m110 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m111 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m112 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m113 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m114 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m115 [ Shard ] [src/tiling.c -> 50] [0mTiled: 5 -> 18874371
-[1;32m116 [ Shard ] [src/tiling.c -> 50] [0mTiled: 6 -> 20971523
-[1;32m117 [ Shard ] [src/tiling.c -> 50] [0mTiled: 7 -> 23068675
-[1;32m118 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m119 [ Shard ] [src/shard.c -> 108] [0mKilled client 23068675
-[1;32m120 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m121 [ Shard ] [src/shard.c -> 101] [0mDeleted window 23068675
-[1;32m122 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m123 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m124 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m125 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m126 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m127 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m128 [ Shard ] [src/tiling.c -> 50] [0mTiled: 5 -> 18874371
-[1;32m129 [ Shard ] [src/tiling.c -> 50] [0mTiled: 6 -> 20971523
-[1;32m130 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m131 [ Shard ] [src/shard.c -> 108] [0mKilled client 20971523
-[1;32m132 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m133 [ Shard ] [src/shard.c -> 101] [0mDeleted window 20971523
-[1;32m134 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m135 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m136 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m137 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m138 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m139 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m140 [ Shard ] [src/tiling.c -> 50] [0mTiled: 5 -> 18874371
-[1;32m141 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m142 [ Shard ] [src/shard.c -> 108] [0mKilled client 18874371
-[1;32m143 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m144 [ Shard ] [src/shard.c -> 101] [0mDeleted window 18874371
-[1;32m145 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m146 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m147 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m148 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m149 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m150 [ Shard ] [src/tiling.c -> 50] [0mTiled: 4 -> 16777219
-[1;32m151 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m152 [ Shard ] [src/shard.c -> 108] [0mKilled client 16777219
-[1;32m153 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m154 [ Shard ] [src/shard.c -> 101] [0mDeleted window 16777219
-[1;32m155 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m156 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m157 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m158 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m159 [ Shard ] [src/tiling.c -> 50] [0mTiled: 3 -> 14680067
-[1;32m160 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m161 [ Shard ] [src/shard.c -> 108] [0mKilled client 14680067
-[1;32m162 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m163 [ Shard ] [src/shard.c -> 101] [0mDeleted window 14680067
-[1;32m164 [ Shard ] [src/tiling.c -> 48] [0mUpdating stack....
-[1;32m165 [ Shard ] [src/tiling.c -> 50] [0mTiled: 0 -> 8388611
-[1;32m166 [ Shard ] [src/tiling.c -> 50] [0mTiled: 1 -> 10485763
-[1;32m167 [ Shard ] [src/tiling.c -> 50] [0mTiled: 2 -> 12582915
-[1;32m168 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m169 [ Shard ] [src/shard.c -> 108] [0mKilled client 12582915
-[1;32m170 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m171 [ Shard ] [src/shard.c -> 101] [0mDeleted window 12582915
-[1;32m172 [ Shard ] [src/tiling.c -> 41] [0mUpdating master...
-[1;32m173 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m174 [ Shard ] [src/shard.c -> 189] [0mExiting...
-[1;32m175 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m176 [ Shard ] [src/shard.c -> 240] [0mClosing display -> :50
+[1;32m63 [ Shard ] [src/shard.c -> 101] [0mDeleted window 18874371
+[1;32m64 [ Shard ] [src/tiling.c -> 44] [0mUpdating stack....
+[1;32m65 [ Shard ] [src/tiling.c -> 46] [0mTiled: 0 -> 8388611
+[1;32m66 [ Shard ] [src/tiling.c -> 46] [0mTiled: 1 -> 10485763
+[1;32m67 [ Shard ] [src/tiling.c -> 46] [0mTiled: 2 -> 12582915
+[1;32m68 [ Shard ] [src/tiling.c -> 46] [0mTiled: 3 -> 14680067
+[1;32m69 [ Shard ] [src/tiling.c -> 46] [0mTiled: 4 -> 16777219
+[1;32m70 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m71 [ Shard ] [src/shard.c -> 108] [0mKilled client 16777219
+[1;32m72 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m73 [ Shard ] [src/shard.c -> 101] [0mDeleted window 16777219
+[1;32m74 [ Shard ] [src/tiling.c -> 44] [0mUpdating stack....
+[1;32m75 [ Shard ] [src/tiling.c -> 46] [0mTiled: 0 -> 8388611
+[1;32m76 [ Shard ] [src/tiling.c -> 46] [0mTiled: 1 -> 10485763
+[1;32m77 [ Shard ] [src/tiling.c -> 46] [0mTiled: 2 -> 12582915
+[1;32m78 [ Shard ] [src/tiling.c -> 46] [0mTiled: 3 -> 14680067
+[1;32m79 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m80 [ Shard ] [src/shard.c -> 108] [0mKilled client 14680067
+[1;32m81 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m82 [ Shard ] [src/shard.c -> 101] [0mDeleted window 14680067
+[1;32m83 [ Shard ] [src/tiling.c -> 44] [0mUpdating stack....
+[1;32m84 [ Shard ] [src/tiling.c -> 46] [0mTiled: 0 -> 8388611
+[1;32m85 [ Shard ] [src/tiling.c -> 46] [0mTiled: 1 -> 10485763
+[1;32m86 [ Shard ] [src/tiling.c -> 46] [0mTiled: 2 -> 12582915
+[1;32m87 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m88 [ Shard ] [src/shard.c -> 108] [0mKilled client 12582915
+[1;32m89 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m90 [ Shard ] [src/shard.c -> 101] [0mDeleted window 12582915
+[1;32m91 [ Shard ] [src/tiling.c -> 37] [0mUpdating master...
+[1;32m92 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m93 [ Shard ] [src/shard.c -> 108] [0mKilled client 10485763
+[1;32m94 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m95 [ Shard ] [src/shard.c -> 101] [0mDeleted window 10485763
+[1;32m96 [ Shard ] [src/tiling.c -> 33] [0mUpdating primary master...
+[1;32m97 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m98 [ Shard ] [src/shard.c -> 190] [0mExiting...
+[1;32m99 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m100 [ Shard ] [src/shard.c -> 241] [0mClosing display -> :50

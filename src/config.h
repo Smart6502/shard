@@ -31,7 +31,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define MOD Mod4Mask
 int tile_perc =  55;
 
-const char* menu[]    	 = {"dmenu_run -sb '#5e81ac'",		   	0};
+const char* menu[]    	 = {"dmenu_run",			   	0};
 const char* term[]    	 = {"termite",				    	0};
 const char* screenshot[] = {"flameshot gui",	            	    	0};
 const char* lock[]	 = {"sh /home/xenon/.local/bin/lock",	    	0};

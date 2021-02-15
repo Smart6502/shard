@@ -25,10 +25,6 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-void tile(const Window w);
-int getwnum(const Window w);
-void updatetiles(void);
-void deltile(const Window w);
 
 // # MESSIEST CODE IN THE WHOLE PROJECT :)
 
@@ -91,8 +87,7 @@ int getwnum(const Window w) {
 	return wnum;
 }
 
-
-// FIX THIS NOT WORKING PROPERLY !!
+// FIX THIS NOT WORKING PROPERLY !! (master glitch)
 void deltile(const Window w) {
 	if(info.size == 0) return;
 	int wi = getwnum(w);

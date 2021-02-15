@@ -109,7 +109,8 @@ void killwin(const Arg arg) {
 }
 
 void centerwin(const Arg arg) {
-    if (!cur) return;
+    if(!cur) return;
+    if(getwnum(cur->w)) return;
 
     sizewin(cur->w, &(int){0}, &(int){0}, &ww, &wh);
     XMoveWindow(d, cur->w, (sw - ww) / 2, (sh - wh) / 2); logger("Centered window %d", cur->w);
@@ -120,9 +121,9 @@ void win_fs(const Arg arg) {
 
     if ((cur->f = cur->f ? 0 : 1)) {
         sizewin(cur->w, &cur->wx, &cur->wy, &cur->ww, &cur->wh);
-        XMoveResizeWindow(d, cur->w, 0, 0, sw, sh); logger("Wmode of %d -> Fs", cur->w);
+        XMoveResizeWindow(d, cur->w, 0, 0, sw, sh); logger("Wmode -> %d -> Fs", cur->w);
     } else {
-        XMoveResizeWindow(d, cur->w, cur->wx, cur->wy, cur->ww, cur->wh); logger("Wmode of %d !-> Fs", cur->w);
+        XMoveResizeWindow(d, cur->w, cur->wx, cur->wy, cur->ww, cur->wh); logger("Wmode -> %d !-> Fs", cur->w);
 	}
 }
 
