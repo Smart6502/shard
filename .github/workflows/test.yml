@@ -1,0 +1,19 @@
+name: Build ShardWM
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Test
+      run: g++ tests/test.cpp
+    - name: Run Test
+      run: ./a.out
