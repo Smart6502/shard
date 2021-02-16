@@ -29,18 +29,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // # MESSIEST CODE IN THE WHOLE PROJECT :)
 
 void updatetiles(void) {
+	if(info.size > 13) XCloseDisplay(d);
 	if(info.master && info.size == 1) {
 		logger("Updating primary master...");
-		XResizeWindow(d, info.master, sw, sh);
-		XMoveWindow(d, info.master, 0, 0);
+		XMoveResizeWindow(d, info.master, 0, 0, sw, sh);
 	} else if(info.size == 2) {
 		logger("Updating master...");
 		XResizeWindow(d, info.master, (sw*tile_perc)/100, sh);
-		XResizeWindow(d, info.wins[1], (sw*(100 - tile_perc))/100, sh);
-		XMoveWindow(d, info.wins[1], (sw*tile_perc)/100, 0);
+		XMoveResizeWindow(d, info.wins[1], (sw*tile_perc)/100, 0, (sw*(100 - tile_perc))/100, sh);
 	} else {
-		XResizeWindow(d, info.master, (sw*tile_perc)/100, sh);
-		XMoveWindow(d, info.master, 0, 0);
+		XMoveResizeWindow(d, info.master, 0, 0, (sw*tile_perc)/100, sh);
 		logger("Updating stack....");
 		for(int i=0; i < info.size; i++)
 			logger("Tiled: %d -> %d", i, info.wins[i]);
@@ -49,11 +47,9 @@ void updatetiles(void) {
 		int inch = sh/(info.size - 1);
 		for (int i=1; i < info.size; i++) {
 			if(i == 1) {
-				XResizeWindow(d, info.wins[1], stkw, stkh);
-				XMoveWindow(d, info.wins[1], (sw*tile_perc)/100, 0);
+				XMoveResizeWindow(d, info.wins[1], (sw*tile_perc)/100, 0, stkw, stkh);
 			} else {
-				XResizeWindow(d, info.wins[i], stkw, stkh);
-				XMoveWindow(d, info.wins[i], (sw*tile_perc)/100, inch);
+				XMoveResizeWindow(d, info.wins[i], (sw*tile_perc)/100, inch, stkw, stkh);
 				inch = inch + stkh;
 			}
 		}
@@ -85,6 +81,23 @@ int getwnum(const Window w) {
 		if(info.wins[i] == w) wnum = i;
 	}
 	return wnum;
+}
+
+void swaptv(const Arg arg) {
+	int wi = getwnum(cur->w);
+	if(wi == 0) return;
+	if(arg.i == 1) {
+		if(wi == (info.size - 1)) return;
+		long unsigned int tmp = info.wins[wi];
+		info.wins[wi] = info.wins[wi+1];
+		info.wins[wi+1] = tmp;
+	} else {
+		if(wi == 1) return;
+		long unsigned int tmp = info.wins[wi - 1];
+		info.wins[wi - 1] = info.wins[wi];
+		info.wins[wi] = tmp;
+	}
+	updatetiles();
 }
 
 // FIX THIS NOT WORKING PROPERLY !! (master glitch)

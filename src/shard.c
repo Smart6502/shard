@@ -30,13 +30,87 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <X11/keysym.h>
 #include <X11/XKBlib.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <signal.h>
 #include <unistd.h>
-#include <shard.h>
 #include <util.h>
 
+#define win        (client *t=0, *c=list; c && t!=list->prev; t=c, c=c->next)
+#define ws_save(W) {\
+	ws_list[W] = list;\
+	ws_info[W] = info;\
+}
+#define ws_sel(W)  {\
+	list = ws_list[ws = W];\
+	info = ws_info[ws = W];\
+}
+#define MAX(a, b)  ((a) > (b) ? (a) : (b))
+#define sizewin(W, gx, gy, gw, gh) \
+    XGetGeometry(d, W, &(Window){0}, gx, gy, gw, gh, \
+                 &(unsigned int){0}, &(unsigned int){0})
+#define mod_clean(mask) (mask & ~(numlock|LockMask) & \
+        (ShiftMask|ControlMask|Mod1Mask|Mod2Mask|Mod3Mask|Mod4Mask|Mod5Mask))
+
+typedef struct {
+    const char** com;
+    const int i;
+    const Window w;
+} Arg;
+
+struct key {
+    unsigned int mod;
+    KeySym keysym;
+    void (*function)(const Arg arg);
+    const Arg arg;
+};
+
+typedef struct client {
+    struct client *next, *prev;
+    int f, wx, wy;
+    unsigned int ww, wh;
+    Window w;
+    bool locked;
+} client;
+
+typedef struct _wsinfo {
+	int size;
+	Window wins[15];
+	Window master;
+} wsinfo;
+
+void focus(client *c);
+void button_press(XEvent *e);
+void button_release(XEvent *e);
+void confreq(XEvent *e);
+int getwnum(const Window w);
+void mapreq(XEvent *e);
+void keypress(XEvent *e);
+void notify_enter(XEvent *e);
+void notify_destroy(XEvent *e);
+void notify_mapping(XEvent *e);
+void notify_motion(XEvent *e);
+void addwin(Window w);
+void delwin(Window w);
+void killwin(const Arg arg);
+void centerwin(const Arg arg);
+void tile(const Window w);
+void deltile(const Window w);
+void setup_hints(void);
+void sizetiles(const Arg arg);
+void swaptv(const Arg arg);
+void updatetiles(void);
+void win_fs(const Arg arg);
+void win_to_ws(const Arg arg);
+void win_prev(const Arg arg);
+void win_next(const Arg arg);
+void ws_go(const Arg arg);
+static void run(const Arg arg);
+void quit(const Arg arg);
+void grabinput(Window root);
+static int xerror() { return 0; }
+
 static client       *list = {0}, *ws_list[10] = {0}, *cur;
-static _wsinfo	    info, ws_info[10];
+static wsinfo	    info, ws_info[10];
 static int          ws = 1, sw, sh, wx, wy, numlock = 0, restart = 0, running = 1;
 static unsigned int ww, wh;
 
@@ -46,6 +120,7 @@ static Window		root;
 
 #include <config.h>
 #include <tiling.c>
+#include <ewmh.c>
 #include <events.c>
 
 static void (*evhandler[LASTEvent])(XEvent *e) = {
@@ -72,6 +147,7 @@ void addwin(Window w) {
         exit(1);
 
     c->w = w;
+    c->locked = false;
 
     if (list) {
         list->prev->next = c;
@@ -104,7 +180,7 @@ void delwin(Window w) {
 }
 
 void killwin(const Arg arg) {
-    if (cur) XKillClient(d, cur->w);
+    if (cur && cur->locked == false) XKillClient(d, cur->w);
     logger("Killed client %d", cur->w);
 }
 
@@ -234,6 +310,7 @@ int main(int argc, char* argv[]) {
     XSelectInput(d,  root, SubstructureRedirectMask);
     XDefineCursor(d, root, XCreateFontCursor(d, 68)); logger("Created cursor!");
     grabinput(root); logger("Grabbed input!"); 
+    setup_hints();
     logger("Initialized shardWM");
     while (running && !XNextEvent(d, &ev))
         if (evhandler[ev.type]) evhandler[ev.type](&ev);

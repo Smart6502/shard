@@ -99,7 +99,7 @@ void notify_mapping(XEvent *e) {
 }
 
 void notify_motion(XEvent *e) {
-    if (!mouse.subwindow || cur->f || getwnum(cur->w)) return;
+    if (!mouse.subwindow || cur->f || getwnum(cur->w) || cur->w == info.wins[0]) return;
 
     while(XCheckTypedEvent(d, MotionNotify, e));
 

@@ -10,7 +10,7 @@ all: shard
 config.h:
 	cp src/config.def.h src/config.h
 
-shard: src/shard.c src/shard.h src/config.h Makefile
+shard: src/shard.c src/config.h Makefile
 	$(CC) -O3 $(CFLAGS) -o build/$@ $< -lX11 $(LDFLAGS)
 
 install: all
