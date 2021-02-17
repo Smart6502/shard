@@ -8,5 +8,4 @@ startx ./.xinitrc -- \
 		:50 \
 		-ac \
 		-screen $I
-DISPLAY=:50 termite &
 cat .shard.log

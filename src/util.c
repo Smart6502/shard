@@ -27,13 +27,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #include <stdio.h>
 #include <stdarg.h>
-#include <time.h>
-#include <string.h>
 #include <stdlib.h>
 FILE *fp ;
 static int SESSION_TRACKER;
 
-void log_print(char* filename, int line, char *fmt, ...)
+void log_print(const int col, char* filename, int line, char *fmt, ...)
 {
     va_list         list;
     char            *p, *r;
@@ -44,7 +42,7 @@ void log_print(char* filename, int line, char *fmt, ...)
     else
       fp = fopen (".shard.log","w");
     
-    fprintf(fp,"\033[1;32m%d [ Shard ] ", SESSION_TRACKER + 1);
+    fprintf(fp,"\033[1;%dm%d [ Shard ] ", col, SESSION_TRACKER + 1);
     fprintf(fp,"[%s -> %d] \033[0m",filename,line);
     va_start( list, fmt );
 

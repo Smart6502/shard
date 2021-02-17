@@ -83,6 +83,7 @@ void button_press(XEvent *e);
 void button_release(XEvent *e);
 void confreq(XEvent *e);
 int getwnum(const Window w);
+void init(void);
 void mapreq(XEvent *e);
 void keypress(XEvent *e);
 void notify_enter(XEvent *e);
@@ -294,10 +295,21 @@ void grabinput(Window root) {
     XFreeModifiermap(modmap);
 }
 
+void init(void)
+{
+	XSelectInput(d, root, SubstructureRedirectMask);
+	XDefineCursor(d, root, XCreateFontCursor(d, 68)); logger("Created cursor!");
+	grabinput(root); logger("Grabbed input!");
+	setup_hints();
+	int stsize = sizeof stcmds / sizeof stcmds[0];
+	for(int i=0; i < stsize; i++) 
+		system(stcmds[i]);
+}
+
 int main(int argc, char* argv[]) {
     XEvent ev;
 
-    if (!(d = XOpenDisplay(0))) exit(1); 
+    if (!(d = XOpenDisplay(0))) die("Couldn't open display"); 
     logger("Initializing shardWM on display %s", XDisplayName(0));
     signal(SIGCHLD, SIG_IGN);
     XSetErrorHandler(xerror);
@@ -307,10 +319,7 @@ int main(int argc, char* argv[]) {
     sw    = XDisplayWidth(d, s);
     sh    = XDisplayHeight(d, s); 
 
-    XSelectInput(d,  root, SubstructureRedirectMask);
-    XDefineCursor(d, root, XCreateFontCursor(d, 68)); logger("Created cursor!");
-    grabinput(root); logger("Grabbed input!"); 
-    setup_hints();
+    init();
     logger("Initialized shardWM");
     while (running && !XNextEvent(d, &ev))
         if (evhandler[ev.type]) evhandler[ev.type](&ev);

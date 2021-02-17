@@ -25,6 +25,10 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-void log_print(char* filename, int line, char *fmt,...);
-#define logger(...) log_print(__FILE__, __LINE__, __VA_ARGS__ )
+void log_print(const int col, char* filename, int line, char *fmt,...);
+#define logger(...) log_print(32, __FILE__, __LINE__, __VA_ARGS__ )
+#define die(...) {\
+	log_print(31, __FILE__, __LINE__, __VA_ARGS__);\
+	exit(1);\
+}
 #include "util.c"

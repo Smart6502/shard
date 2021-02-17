@@ -29,24 +29,32 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define CONFIG_H
 
 #define MOD Mod4Mask
+static const int tile_perc = 55;
+static const int framegap = 0;
 
-const char* menu[]    	 = {"dmenu_run -sb '#5e81ac'",		   	0};
-const char* term[]    	 = {"termite",				    	0};
-const char* screenshot[] = {"flameshot gui",	            	    	0};
-const char* lock[]	 = {"sh /home/xenon/.local/bin/lock",	    	0};
-const char* briup[]   	 = {"brightnessctl", "set", "+5%", 	   	0};
-const char* bridown[] 	 = {"brightnessctl", "set", "5%-",	  	0};
-const char* voldown[] 	 = {"amixer", "sset", "Master", "5%-",		0};
-const char* volup[]   	 = {"amixer", "sset", "Master", "5%+",		0};
-const char* volmute[] 	 = {"amixer", "sset", "Master", "toggle",	0};
+static const char* menu[]    	 = {"dmenu_run",			   	0};
+static const char* term[]    	 = {"termite",				    	0};
+static const char* screenshot[]  = {"flameshot gui",	            	    	0};
+static const char* lock[]	 = {"sh /home/xenon/.local/bin/util/lock",    	0};
+static const char* briup[]   	 = {"brightnessctl", "set", "+5%", 	   	0};
+static const char* bridown[] 	 = {"brightnessctl", "set", "5%-",	  	0};
+static const char* voldown[] 	 = {"amixer", "sset", "Master", "5%-",		0};
+static const char* volup[]   	 = {"amixer", "sset", "Master", "5%+",		0};
+static const char* volmute[] 	 = {"amixer", "sset", "Master", "toggle",	0};
+static const char* stcmds[]	 = {
+	"sh $HOME/.fehbg",
+	"xset r rate 300 50"
+};
 
 static struct key keys[] = {
     {MOD,      XK_q,   killwin,   {0}},
     {MOD,      XK_c,   centerwin, {0}},
-    {MOD,      XK_f,   win_fs,     {0}},
-
-    {Mod1Mask,           XK_Tab, win_next,   {0}},
-    {Mod1Mask|ShiftMask, XK_Tab, win_prev,   {0}},
+    {MOD,      XK_f,   win_fs,    {0}},
+    
+    {MOD,	XK_l, 	 win_next,   {0}},
+    {MOD,	XK_h,	 win_prev,   {0}},
+    {MOD,	XK_k,	 swaptv,     {.i = 0}},
+    {MOD,	XK_j,	 swaptv,     {.i = 1}},
 
     {MOD, XK_d,		run, {.com = menu}},
     {MOD, XK_p,		run, {.com = screenshot}},

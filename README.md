@@ -17,6 +17,21 @@ An tiling and floating window manager with quite some features and low memory us
 
 ## Keybinds 
 
+**WM Control**
+
+| combo				| action		|
+| ----------------------------- | --------------------- |
+| `MOD4` + `q`			| close window		|
+| `MOD4` + `f`			| fullscreen		|
+| `MOD4` + `l`			| focus next		|
+| `MOD4` + `h`			| focus prev		|
+| `MOD4` + `k`			| swap stack up		|
+| `MOD4` + `j`			| swap stack down	|
+| `MOD4` + `<ws>`		| change ws		|
+| `MOD4`+`shift` + `ws`		| shift window to ws	|
+| `MOD4`+ `q`			| quit shard		|
+
+
 **Programs**
 
 | combo                    | action           | program        |
@@ -53,7 +68,7 @@ Type=Application
 
 Or you can use an xinit implementation, such as:
 ```
-sh ~/.fehbg
+rm ./.shard.log
 exec shard
 ```
 

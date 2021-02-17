@@ -11,6 +11,7 @@ config.h:
 	cp src/config.def.h src/config.h
 
 shard: src/shard.c src/config.h Makefile
+	[ -d build/ ] || mkdir build
 	$(CC) -O3 $(CFLAGS) -o build/$@ $< -lX11 $(LDFLAGS)
 
 install: all
@@ -20,6 +21,6 @@ uninstall:
 	rm -f $(DESTDIR)$(BINDIR)/shard
 
 clean:
-	rm -f build/shard build/*.o
+	rm -rf build/
 
 .PHONY: all install uninstall clean
