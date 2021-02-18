@@ -5,13 +5,14 @@ An tiling and floating window manager with quite some features and low memory us
 - Floating + tiling.
 - Fullscreen toggle.
 - Window centering.
-- Mix of mouse and keyboard workflow.
 - Focus with cursor.
 - Alt-Tab window focusing.
+- Window and frame gaps.
 - All windows die on exit.
 - No window borders (yet).
 - etc etc etc.
 
+<a href="https://cdn.discordapp.com/attachments/779355532711821343/811628421687541810/unknown.png"><img src="https://cdn.discordapp.com/attachments/779355532711821343/811628421687541810/unknown.png" width="43%" align="right"></a>
 
 <br>
 
@@ -57,7 +58,7 @@ An tiling and floating window manager with quite some features and low memory us
 2) Run `make` to build `shard`.
 3) Copy it to your path or run `make install`.
 
-To use with a DM, put this into /usr/share/xsessions/shard.desktop:
+To use with a DM, put this into `/usr/share/xsessions/shard.desktop`:
 ```
 [Desktop Entry]
 Name=shard
@@ -66,7 +67,7 @@ Exec=shard
 Type=Application
 ```
 
-Or you can use an xinit implementation, such as:
+Or you can use an xinit `implementation`, such as:
 ```
 rm ./.shard.log
 exec shard

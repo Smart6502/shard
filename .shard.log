@@ -1,89 +1,48 @@
-[1;32m1 [ Shard ] [src/shard.c -> 315] [0mInitializing shardWM on display :50
-[1;32m2 [ Shard ] [src/shard.c -> 303] [0mCreated cursor!
-[1;32m3 [ Shard ] [src/shard.c -> 304] [0mGrabbed input!
-[1;32m4 [ Shard ] [src/shard.c -> 325] [0mInitialized shardWM
-[1;32m5 [ Shard ] [src/events.c -> 97] [0mEvent: MappingNotify
-[1;32m6 [ Shard ] [src/shard.c -> 261] [0mRunning shard...
-[1;32m7 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m8 [ Shard ] [src/events.c -> 51] [0mEvent: ConfigureRequest
-[1;32m9 [ Shard ] [src/tiling.c -> 64] [0mSet up master 6291459
-[1;32m10 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
-[1;32m11 [ Shard ] [src/shard.c -> 164] [0mAdded window 6291459
-[1;32m12 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m13 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m14 [ Shard ] [src/tiling.c -> 64] [0mSet up master 6291459
-[1;32m15 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
-[1;32m16 [ Shard ] [src/shard.c -> 164] [0mAdded window 6291459
-[1;32m17 [ Shard ] [src/shard.c -> 179] [0mDeleted window 6291459
-[1;32m18 [ Shard ] [src/tiling.c -> 111] [0mMaster deleted 0
-[1;32m19 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
-[1;32m20 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
-[1;32m21 [ Shard ] [src/shard.c -> 224] [0mWindow 6291459 -> 2
-[1;32m22 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m23 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m24 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m25 [ Shard ] [src/shard.c -> 261] [0mRunning shard...
-[1;32m26 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m27 [ Shard ] [src/events.c -> 51] [0mEvent: ConfigureRequest
-[1;32m28 [ Shard ] [src/tiling.c -> 37] [0mUpdating master...
-[1;32m29 [ Shard ] [src/shard.c -> 164] [0mAdded window 10485763
-[1;32m30 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m31 [ Shard ] [src/shard.c -> 186] [0mKilled client 10485763
-[1;32m32 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m33 [ Shard ] [src/shard.c -> 179] [0mDeleted window 10485763
-[1;32m34 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
-[1;32m35 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m36 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m37 [ Shard ] [src/tiling.c -> 64] [0mSet up master 6291459
-[1;32m38 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
-[1;32m39 [ Shard ] [src/shard.c -> 164] [0mAdded window 6291459
-[1;32m40 [ Shard ] [src/shard.c -> 179] [0mDeleted window 6291459
-[1;32m41 [ Shard ] [src/tiling.c -> 111] [0mMaster deleted 0
-[1;32m42 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
-[1;32m43 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
-[1;32m44 [ Shard ] [src/shard.c -> 224] [0mWindow 6291459 -> 3
-[1;32m45 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m46 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m47 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m48 [ Shard ] [src/shard.c -> 261] [0mRunning shard...
-[1;32m49 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m50 [ Shard ] [src/events.c -> 51] [0mEvent: ConfigureRequest
-[1;32m51 [ Shard ] [src/tiling.c -> 37] [0mUpdating master...
-[1;32m52 [ Shard ] [src/shard.c -> 164] [0mAdded window 10485763
-[1;32m53 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m54 [ Shard ] [src/shard.c -> 261] [0mRunning shard...
-[1;32m55 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m56 [ Shard ] [src/events.c -> 51] [0mEvent: ConfigureRequest
-[1;32m57 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
-[1;32m58 [ Shard ] [src/tiling.c -> 44] [0mTiled: 0 -> 6291459
-[1;32m59 [ Shard ] [src/tiling.c -> 44] [0mTiled: 1 -> 10485763
-[1;32m60 [ Shard ] [src/tiling.c -> 44] [0mTiled: 2 -> 12582915
-[1;32m61 [ Shard ] [src/shard.c -> 164] [0mAdded window 12582915
-[1;32m62 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
-[1;32m63 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m64 [ Shard ] [src/shard.c -> 186] [0mKilled client 6291459
-[1;32m65 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m66 [ Shard ] [src/shard.c -> 179] [0mDeleted window 6291459
-[1;32m67 [ Shard ] [src/tiling.c -> 37] [0mUpdating master...
-[1;32m68 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m69 [ Shard ] [src/shard.c -> 186] [0mKilled client 12582915
-[1;32m70 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m71 [ Shard ] [src/shard.c -> 179] [0mDeleted window 12582915
-[1;32m72 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
-[1;32m73 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
-[1;32m74 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m75 [ Shard ] [src/tiling.c -> 64] [0mSet up master 10485763
-[1;32m76 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
-[1;32m77 [ Shard ] [src/shard.c -> 164] [0mAdded window 10485763
-[1;32m78 [ Shard ] [src/shard.c -> 179] [0mDeleted window 10485763
-[1;32m79 [ Shard ] [src/tiling.c -> 111] [0mMaster deleted 0
-[1;32m80 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
-[1;32m81 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
-[1;32m82 [ Shard ] [src/shard.c -> 224] [0mWindow 10485763 -> 2
-[1;32m83 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m84 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m85 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m86 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
-[1;32m87 [ Shard ] [src/shard.c -> 269] [0mExiting...
-[1;32m88 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
-[1;32m89 [ Shard ] [src/shard.c -> 329] [0mClosing display -> :50
+[1;32m1 [ Shard ] [src/shard.c -> 325] [0mInitializing shardWM on display :50
+[1;32m2 [ Shard ] [src/shard.c -> 313] [0mCreated cursor!
+[1;32m3 [ Shard ] [src/shard.c -> 314] [0mGrabbed input!
+[1;32m4 [ Shard ] [src/shard.c -> 335] [0mInitialized shardWM
+[1;32m5 [ Shard ] [src/shard.c -> 271] [0mRunning shard...
+[1;32m6 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m7 [ Shard ] [src/events.c -> 51] [0mEvent: ConfigureRequest
+[1;32m8 [ Shard ] [src/tiling.c -> 64] [0mSet up master 6291459
+[1;32m9 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
+[1;32m10 [ Shard ] [src/shard.c -> 164] [0mAdded window 6291459
+[1;32m11 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
+[1;32m12 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
+[1;32m13 [ Shard ] [src/shard.c -> 271] [0mRunning shard...
+[1;32m14 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m15 [ Shard ] [src/events.c -> 51] [0mEvent: ConfigureRequest
+[1;32m16 [ Shard ] [src/tiling.c -> 37] [0mUpdating master...
+[1;32m17 [ Shard ] [src/shard.c -> 164] [0mAdded window 10485763
+[1;32m18 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
+[1;32m19 [ Shard ] [src/shard.c -> 271] [0mRunning shard...
+[1;32m20 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m21 [ Shard ] [src/events.c -> 51] [0mEvent: ConfigureRequest
+[1;32m22 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
+[1;32m23 [ Shard ] [src/tiling.c -> 44] [0mTiled: 0 -> 6291459
+[1;32m24 [ Shard ] [src/tiling.c -> 44] [0mTiled: 1 -> 10485763
+[1;32m25 [ Shard ] [src/tiling.c -> 44] [0mTiled: 2 -> 12582915
+[1;32m26 [ Shard ] [src/shard.c -> 164] [0mAdded window 12582915
+[1;32m27 [ Shard ] [src/events.c -> 66] [0mEvent: MapRequest
+[1;32m28 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
+[1;32m29 [ Shard ] [src/shard.c -> 196] [0mKilled client 6291459
+[1;32m30 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m31 [ Shard ] [src/shard.c -> 179] [0mDeleted window 6291459
+[1;32m32 [ Shard ] [src/tiling.c -> 37] [0mUpdating master...
+[1;32m33 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m34 [ Shard ] [src/shard.c -> 196] [0mKilled client 12582915
+[1;32m35 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m36 [ Shard ] [src/shard.c -> 179] [0mDeleted window 12582915
+[1;32m37 [ Shard ] [src/tiling.c -> 34] [0mUpdating primary master...
+[1;32m38 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m39 [ Shard ] [src/events.c -> 81] [0mEvent: EnterNotify
+[1;32m40 [ Shard ] [src/shard.c -> 196] [0mKilled client 10485763
+[1;32m41 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m42 [ Shard ] [src/shard.c -> 179] [0mDeleted window 10485763
+[1;32m43 [ Shard ] [src/tiling.c -> 111] [0mMaster deleted 0
+[1;32m44 [ Shard ] [src/tiling.c -> 42] [0mUpdating stack....
+[1;32m45 [ Shard ] [src/events.c -> 87] [0mEvent: DestroyNotify
+[1;32m46 [ Shard ] [src/shard.c -> 279] [0mExiting...
+[1;32m47 [ Shard ] [src/events.c -> 75] [0mEvent: KeyPress
+[1;32m48 [ Shard ] [src/shard.c -> 339] [0mClosing display -> :50

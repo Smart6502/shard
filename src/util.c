@@ -29,11 +29,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdarg.h>
 #include <stdlib.h>
 FILE *fp ;
-static int SESSION_TRACKER;
+static int SESSION_TRACKER, logst = 0;
 
 void log_print(const int col, char* filename, int line, char *fmt, ...)
 {
-    va_list         list;
+    if(logst) return;
+    va_list	    list;
     char            *p, *r;
     int             e;
 

@@ -45,6 +45,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	info = ws_info[ws = W];\
 }
 #define MAX(a, b)  ((a) > (b) ? (a) : (b))
+#define LENGTH(x)  sizeof x / sizeof *x
 #define sizewin(W, gx, gy, gw, gh) \
     XGetGeometry(d, W, &(Window){0}, gx, gy, gw, gh, \
                  &(unsigned int){0}, &(unsigned int){0})
@@ -112,7 +113,7 @@ static int xerror() { return 0; }
 
 static client       *list = {0}, *ws_list[10] = {0}, *cur;
 static wsinfo	    info, ws_info[10];
-static int          ws = 1, sw, sh, wx, wy, numlock = 0, restart = 0, running = 1;
+static int          ws = 1, sw, sh, wx, wy, numlock = 0, running = 1;
 static unsigned int ww, wh;
 
 static Display		*d;
@@ -182,7 +183,17 @@ void delwin(Window w) {
 }
 
 void killwin(const Arg arg) {
-    if (cur && cur->locked == false) XKillClient(d, cur->w);
+    if(!cur) return;
+
+    XEvent ev = { .type = ClientMessage };
+
+    ev.xclient.window		= cur->w;
+    ev.xclient.format		= 32;
+    ev.xclient.message_type	= XInternAtom(d, "WM_PROTOCOLS", True);
+    ev.xclient.data.l[0]	= XInternAtom(d, "WM_DELETE_WINDOW", True);
+    ev.xclient.data.l[1]	= CurrentTime;
+
+    XSendEvent(d, cur->w, False, NoEventMask, &ev);
     logger("Killed client %d", cur->w);
 }
 
@@ -265,7 +276,6 @@ void run(const Arg arg) {
 }
 
 void quit(const Arg arg) {
-	if(arg.i) restart = 1;
 	running = 0; logger("Exiting...");
 }
 
@@ -325,7 +335,6 @@ int main(int argc, char* argv[]) {
     logger("Initialized shardWM");
     while (running && !XNextEvent(d, &ev))
         if (evhandler[ev.type]) evhandler[ev.type](&ev);
-    if(restart) execvp(argv[0], argv);
-    else { XCloseDisplay(d); logger("Closing display -> %s", XDisplayName(0)); }
+    XCloseDisplay(d); logger("Closing display -> %s", XDisplayName(0));
     return EXIT_SUCCESS;
 }

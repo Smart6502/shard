@@ -60,7 +60,7 @@ static struct key keys[] = {
     {MOD,	XK_j,	 swaptv,     {.i = 1}},
 
     {MOD, XK_d,		run, {.com = menu}},
-    {MOD, XK_b,		run, {.com = brave}},
+    {MOD, XK_b,		run, {.com = browser}},
     {MOD, XK_p,		run, {.com = screenshot}},
     {MOD, XK_x,		run, {.com = term}},
     {MOD, XK_i,	     	run, {.com = lock}},

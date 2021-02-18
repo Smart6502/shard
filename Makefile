@@ -5,15 +5,15 @@ BINDIR ?= $(PREFIX)/bin
 CC     ?= gcc
 VERSION = 1
 
-all: shard
+all: config shard
 
-config.h:
-	cp src/config.def.h src/config.h
+config:
+	[ -f src/config.h ] || cp src/config.def.h src/config.h
 
 shard: src/shard.c src/config.h Makefile
 	[ -d build/ ] || mkdir build
 	$(CC) -O3 $(CFLAGS) -o build/$@ $< -lX11 $(LDFLAGS)
-	chmod 777 build/shard
+	chmod 777 build/
 
 install: all
 	install -Dm755 build/shard $(DESTDIR)$(BINDIR)/shard
