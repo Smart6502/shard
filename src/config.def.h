@@ -29,10 +29,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define CONFIG_H
 
 #define MOD Mod4Mask
-static const int tile_perc = 55;
-static const int framegap = 0;
+static const int mfact	  = 50;
+static const int framegap = 16;
+static const int igap	  = 16;
 
-static const char* menu[]    	 = {"dmenu_run",			   	0};
+static const char* menu[]    	 = {"/usr/bin/dmenu_run",			0};
 static const char* term[]    	 = {"termite",				    	0};
 static const char* screenshot[]  = {"flameshot gui",	            	    	0};
 static const char* lock[]	 = {"sh /home/xenon/.local/bin/util/lock",    	0};

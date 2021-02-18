@@ -13,6 +13,7 @@ config.h:
 shard: src/shard.c src/config.h Makefile
 	[ -d build/ ] || mkdir build
 	$(CC) -O3 $(CFLAGS) -o build/$@ $< -lX11 $(LDFLAGS)
+	chmod 777 build/shard
 
 install: all
 	install -Dm755 build/shard $(DESTDIR)$(BINDIR)/shard

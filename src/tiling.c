@@ -28,8 +28,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // # MESSIEST CODE IN THE WHOLE PROJECT :)
 
-int igap = 5;
-
 void updatetiles(void) {
 	if(info.size > 13) XCloseDisplay(d);
 	if(info.master && info.size == 1) {
@@ -37,21 +35,21 @@ void updatetiles(void) {
 		XMoveResizeWindow(d, info.master, 0, 0, sw, sh);
 	} else if(info.size == 2) {
 		logger("Updating master...");
-		XMoveResizeWindow(d, info.master, 0, 0, (sw*tile_perc)/100, sh);
-		XMoveResizeWindow(d, info.wins[1], (sw*tile_perc)/100, 0, (sw*(100 - tile_perc))/100, sh);
+		XMoveResizeWindow(d, info.master, 0, 0, (sw*mfact)/100 - (igap/2), sh);
+		XMoveResizeWindow(d, info.wins[1], (sw*mfact)/100 + (igap/2), 0, (sw*(100 - mfact))/100, sh);
 	} else {
-		XMoveResizeWindow(d, info.master, framegap, framegap, (sw*tile_perc)/100, sh - framegap - framegap);
+		XMoveResizeWindow(d, info.master, framegap, framegap, (sw*mfact)/100 - (igap/2), sh - framegap - framegap);
 		logger("Updating stack....");
 		for(int i=0; i < info.size; i++)
 			logger("Tiled: %d -> %d", i, info.wins[i]);
 		int stkh = (sh - framegap)/(info.size - 1);
-		int stkw = ((sw*(100 - tile_perc))/100);
+		int stkw = ((sw*(100 - mfact))/100) - (framegap*2) - (igap/2);
 		int inch = (sh - framegap)/(info.size - 1);
 		for (int i=1; i < info.size; i++) {
 			if(i == 1) {
-				XMoveResizeWindow(d, info.wins[1], (sw*tile_perc)/100 + framegap, framegap, stkw - framegap - framegap, stkh);
+				XMoveResizeWindow(d, info.wins[1], (sw*mfact)/100 + framegap + igap/2, framegap, stkw, stkh);
 			} else {
-				XMoveResizeWindow(d, info.wins[i], (sw*tile_perc)/100 + framegap, inch, stkw - framegap - framegap, stkh);
+				XMoveResizeWindow(d, info.wins[i], (sw*mfact)/100 + framegap + igap/2, inch, stkw, stkh);
 				inch = inch + stkh;
 			}
 		}

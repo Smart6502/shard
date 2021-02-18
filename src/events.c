@@ -63,7 +63,6 @@ void mapreq(XEvent *e) {
 
     XMapWindow(d, w);
     focus(list->prev);
-    tile(w);
     logger("Event: MapRequest");
 }
 
@@ -93,7 +92,7 @@ void notify_mapping(XEvent *e) {
 
     if (ev->request == MappingKeyboard || ev->request == MappingModifier) {
         XRefreshKeyboardMapping(ev);
-        grabinput(root);
+        grabkeyb(root);
     }
     logger("Event: MappingNotify");
 }

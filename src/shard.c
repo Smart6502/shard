@@ -107,7 +107,7 @@ void win_next(const Arg arg);
 void ws_go(const Arg arg);
 static void run(const Arg arg);
 void quit(const Arg arg);
-void grabinput(Window root);
+void grabkeyb(Window root);
 static int xerror() { return 0; }
 
 static client       *list = {0}, *ws_list[10] = {0}, *cur;
@@ -160,6 +160,7 @@ void addwin(Window w) {
         list = c;
         list->prev = list->next = list;
     }
+    tile(w);
     logger("Added window %d", w);
     ws_save(ws);
 }
@@ -219,6 +220,7 @@ void win_to_ws(const Arg arg) {
     ws_save(tmp);
 
     if (list) focus(list);
+    updatetiles();
     logger("Window %d -> %d", cur->w, arg.i);
 }
 
@@ -267,7 +269,7 @@ void quit(const Arg arg) {
 	running = 0; logger("Exiting...");
 }
 
-void grabinput(Window root) {
+void grabkeyb(Window root) {
     unsigned int i, j, modifiers[] = {0, LockMask, numlock, numlock|LockMask};
     XModifierKeymap *modmap = XGetModifierMapping(d);
     KeyCode code;
@@ -299,7 +301,7 @@ void init(void)
 {
 	XSelectInput(d, root, SubstructureRedirectMask);
 	XDefineCursor(d, root, XCreateFontCursor(d, 68)); logger("Created cursor!");
-	grabinput(root); logger("Grabbed input!");
+	grabkeyb(root); logger("Grabbed input!");
 	setup_hints();
 	int stsize = sizeof stcmds / sizeof stcmds[0];
 	for(int i=0; i < stsize; i++) 
